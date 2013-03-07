@@ -32,6 +32,6 @@ qt5_use_modules(${PROJECT} Widgets)
 if (MSVC)
   set_target_properties(${PROJECT} PROPERTIES
     WIN32_EXECUTABLE YES
-	  LINK_FLAGS "/ENTRY:mainCRTStartup"
+    LINK_FLAGS "/ENTRY:mainCRTStartup"
   )
 endif ()
