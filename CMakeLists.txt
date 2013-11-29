@@ -1,6 +1,7 @@
 # Reference: http://qt-project.org/doc/qt-5.0/qtdoc/cmake-manual.html
 
-cmake_minimum_required(VERSION 2.8.9)
+cmake_minimum_required(VERSION 2.8.12)
+cmake_policy(SET CMP0020 NEW)
 
 set(PROJECT "example")
 
