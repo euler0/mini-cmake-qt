@@ -13,13 +13,13 @@ set(CMAKE_AUTOMOC ON)
 find_package(Qt5Widgets REQUIRED)
 
 set(SOURCE_FILES
-  src/main.cc
-  src/mainwindow.h
-  src/mainwindow.cc
+    src/main.cc
+    src/mainwindow.h
+    src/mainwindow.cc
 )
 
 set(UI_FILES
-  ui/mainwindow.ui
+    ui/mainwindow.ui
 )
 source_group("UI Files" FILES ${UI_FILES})
 
@@ -31,8 +31,8 @@ add_executable(${PROJECT} ${SOURCE_FILES} ${UI_HEADERS} ${UI_FILES})
 qt5_use_modules(${PROJECT} Widgets)
 
 if (MSVC)
-  set_target_properties(${PROJECT} PROPERTIES
-    WIN32_EXECUTABLE YES
-    LINK_FLAGS "/ENTRY:mainCRTStartup"
-  )
+    set_target_properties(${PROJECT} PROPERTIES
+        WIN32_EXECUTABLE YES
+        LINK_FLAGS "/ENTRY:mainCRTStartup"
+    )
 endif ()
