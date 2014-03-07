@@ -7,6 +7,7 @@ set(PROJECT "example")
 
 project(${PROJECT})
 
+set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_AUTOMOC ON)
 
@@ -26,7 +27,14 @@ source_group("UI Files" FILES ${UI_FILES})
 qt5_wrap_ui(UI_HEADERS ${UI_FILES})
 source_group("Generated UI Headers" FILES ${UI_HEADERS})
 
-add_executable(${PROJECT} ${SOURCE_FILES} ${UI_HEADERS} ${UI_FILES})
+add_executable(${PROJECT} MACOSX_BUNDLE ${SOURCE_FILES} ${UI_HEADERS} ${UI_FILES})
+
+set(MACOSX_BUNDLE_BUNDLE_NAME "Example")
+set(MACOSX_BUNDLE_BUNDLE_VERSION "1.0")
+set(MACOSX_BUNDLE_LONG_VERSION_STRING "1.0")
+set(MACOSX_BUNDLE_SHORT_VERSION_STRING "1.0")
+set(MACOSX_BUNDLE_COPYRIGHT "Copyright (c) 2014 Vincent Lee. All rights reserved.")
+set(MACOSX_BUNDLE_GUI_IDENTIFIER "com.example.Example")
 
 qt5_use_modules(${PROJECT} Widgets)
 
