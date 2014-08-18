@@ -19,15 +19,26 @@ set(SOURCE_FILES
     src/mainwindow.cc
 )
 
+if (WIN32)
+    set(SOURCE_FILES ${SOURCE_FILES} win/example.rc)
+endif ()
+
 set(UI_FILES
     ui/mainwindow.ui
 )
 source_group("UI Files" FILES ${UI_FILES})
 
+qt5_add_resources(RESOURCE_FILES example.qrc)
+
 qt5_wrap_ui(UI_HEADERS ${UI_FILES})
 source_group("Generated UI Headers" FILES ${UI_HEADERS})
 
-add_executable(${PROJECT} MACOSX_BUNDLE ${SOURCE_FILES} ${UI_HEADERS} ${UI_FILES})
+add_executable(${PROJECT} MACOSX_BUNDLE
+    ${SOURCE_FILES}
+    ${UI_HEADERS}
+    ${UI_FILES}
+    ${RESOURCE_FILES}
+)
 
 set(MACOSX_BUNDLE_BUNDLE_NAME "Example")
 set(MACOSX_BUNDLE_BUNDLE_VERSION "1.0")
