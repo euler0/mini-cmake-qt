@@ -33,6 +33,11 @@ source_group("Generated UI Headers" FILES ${UI_HEADERS})
 
 qt5_add_resources(RESOURCE_FILES example.qrc)
 
+if (APPLE)
+    set(SOURCE_FILES ${SOURCE_FILES} AppIcon.icns)
+    set_source_files_properties(AppIcon.icns PROPERTIES MACOSX_PACKAGE_LOCATION Resources)
+endif ()
+
 add_executable(${PROJECT} MACOSX_BUNDLE
     ${SOURCE_FILES}
     ${UI_HEADERS}
@@ -46,6 +51,7 @@ set(MACOSX_BUNDLE_LONG_VERSION_STRING "1.0")
 set(MACOSX_BUNDLE_SHORT_VERSION_STRING "1.0")
 set(MACOSX_BUNDLE_COPYRIGHT "Copyright (c) 2014 Vincent Lee. All rights reserved.")
 set(MACOSX_BUNDLE_GUI_IDENTIFIER "com.example.Example")
+set(MACOSX_BUNDLE_ICON_FILE AppIcon.icns)
 
 qt5_use_modules(${PROJECT} Widgets)
 
