@@ -28,10 +28,10 @@ set(UI_FILES
 )
 source_group("UI Files" FILES ${UI_FILES})
 
-qt5_add_resources(RESOURCE_FILES example.qrc)
-
 qt5_wrap_ui(UI_HEADERS ${UI_FILES})
 source_group("Generated UI Headers" FILES ${UI_HEADERS})
+
+qt5_add_resources(RESOURCE_FILES example.qrc)
 
 add_executable(${PROJECT} MACOSX_BUNDLE
     ${SOURCE_FILES}
