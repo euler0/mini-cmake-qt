@@ -29,9 +29,10 @@ set(UI_FILES
 set(COPYRIGHT "Copyright (c) 2014 Vincent Lee. All rights reserved.")
 set(IDENTIFIER "com.example.Example")
 set(RESOURCE_FILES example.qrc)
+set(QT5_USED_MODULES Widgets)
 source_group("UI Files" FILES ${UI_FILES})
 
-qt5_use_modules(${PROJECT} Widgets)
+
 
 if (WIN32)
     set(SOURCE_FILES ${SOURCE_FILES} win/example.rc)
@@ -47,6 +48,8 @@ add_executable(${PROJECT} MACOSX_BUNDLE
     ${UI_FILES}
     ${RESOURCE_FILES}
 )
+
+qt5_use_modules(${PROJECT} ${QT5_USED_MODULES})
 
 # Identify MacOS bundle
 set(MACOSX_BUNDLE_BUNDLE_NAME ${PROJECT_NAME})
