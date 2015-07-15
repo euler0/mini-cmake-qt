@@ -22,21 +22,17 @@ set(SOURCE_FILES
     src/mainwindow.cc
 )
 
-add_project_meta()
+add_project_meta(META_FILES)
 
 
 set(RESOURCE_FILES example.qrc)
 
 find_package(Qt5Widgets REQUIRED)
 
-
-
-
-
 # source_group("UI Files" FILES ${UI_FILES})
 
 add_executable(${PROJECT_NAME} ${APP_TYPE}
-    ${SOURCE_FILES} ${ICON_FILE} ${RESOURCE_FILES}
+    ${SOURCE_FILES} ${META_FILES} ${RESOURCE_FILES}
 )
 # target_link_libraries (${PROJECT_NAME} mainwindow)
 
