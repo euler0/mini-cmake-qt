@@ -2,7 +2,7 @@
 
 cmake_minimum_required(VERSION 3.0)
 
-# Add folder where supportive functions
+# Add folder where are supportive functions
 set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 

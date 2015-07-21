@@ -21,7 +21,7 @@ set(ICON_FILE ${RESOURCE_FOLDER}/${ICON_NAME}.ico)
 endif()
 
 if (WIN32)
-configure_file("${PROJECT_SOURCE_DIR}/${RESOURCE_FOLDER}/windows_metafile.rc.in"
+configure_file("${PROJECT_SOURCE_DIR}/cmake/windows_metafile.rc.in"
   "windows_metafile.rc"
 )
 set(RES_FILES "windows_metafile.rc")
