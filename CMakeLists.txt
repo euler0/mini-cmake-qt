@@ -13,6 +13,8 @@ include(QtCommon)
 
 project(example VERSION 1.0)
 
+fix_project_version()
+
 set(COMPANY "Example")
 set(COPYRIGHT "Copyright (c) 2014 Vincent Lee. All rights reserved.")
 set(IDENTIFIER "com.example.Example")
