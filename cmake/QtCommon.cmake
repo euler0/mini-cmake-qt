@@ -51,11 +51,11 @@ endif()
 
 endmacro()
 
-macro(init_app_type)
+macro(init_os_bundle)
 if (APPLE)
-set(APP_TYPE MACOSX_BUNDLE)
+set(OS_BUNDLE MACOSX_BUNDLE)
 elseif(WIN32)
-set(APP_TYPE WIN32)
+set(OS_BUNDLE WIN32)
 endif()
 endmacro()
 
@@ -75,6 +75,6 @@ set(CMAKE_AUTORCC ON) # Resource files
 set(CMAKE_AUTOUIC ON) # UI files
 endmacro()
 
-init_app_type()
+init_os_bundle()
 init_qt()
 fix_win_compiler()
