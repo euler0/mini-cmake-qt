@@ -6,10 +6,10 @@ cmake_minimum_required(VERSION 3.0)
 set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
-# Include qt basic functions
+# Include Qt basic functions
 include(QtCommon)
 
-# Basic info about project
+# Basic information about project
 
 project(example VERSION 1.0)
 
@@ -27,7 +27,6 @@ set(SOURCE_FILES
 )
 
 add_project_meta(META_FILES_TO_INCLUDE)
-
 
 set(RESOURCE_FILES example.qrc)
 
