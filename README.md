@@ -1,14 +1,14 @@
 # Minimal CMake Template for Qt 5 Projects
 
-[As I've briefly introduced](http://euler.kr/trl/2014/08/19/minimal-cmake-template.html), this is a minimal, but complete and production-ready CMake project template for Qt 5 projects. This may be a starting point for your new application. If that is not intent to be a cross-platform project, you can clean up that stuffs (such as OS X bundle) from the template.
+[As I've briefly introduced](http://euler.kr/trl/2014/08/19/minimal-cmake-template.html), this is a minimal, but complete and production-ready CMake project template for Qt 5 projects. This may be a starting point for your new application. If that is not intent to be a cross-platform project, you can clean up that stuffs from the template.
 
-If you want to deploy your application on OS X, I would recommend you have to read below document.
+If you want to deploy your application on macOS, I would recommend you read below document.
 
-[Deploying an Application on Mac OS X (The Mac Deployment Tool)](http://qt-project.org/doc/qt-4.8/deployment-mac.html#the-mac-deployment-tool)
+[Qt for OS X - Deployment](http://doc.qt.io/qt-5/osx-deployment.html)
 
 ## Features
   * Handling all possible Qt stuffs (UI, resources, ~~translations~~)
-  * OS X bundle
+  * macOS bundle
   * Windows executable icon
 
 ## References
