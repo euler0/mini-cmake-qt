@@ -12,5 +12,5 @@ If you want to deploy your application on macOS, I would recommend you read belo
   * Windows executable icon
 
 ## References
-  * CMake manual: https://qt-project.org/doc/qt-5.0/qtdoc/cmake-manual.html
+  * CMake manual: https://doc.qt.io/qt-5/cmake-manual.html
   * Using CMake with Qt 5: https://www.kdab.com/using-cmake-with-qt-5/
