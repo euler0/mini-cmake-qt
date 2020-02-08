@@ -15,6 +15,14 @@ If you want to deploy your application on macOS, I would recommend you read belo
   * [Qt for macOS - Deployment](https://doc.qt.io/qt-5/macos-deployment.html)
   * [Qt for macOS - Specific Issues](https://doc.qt.io/qt-5/macos-issues.html)
 
+## Windows Deployment
+
+If you want to deploy your application on Windows, I would recommend you read below documents.
+
+* [Qt for Winodws](https://doc.qt.io/qt-5/windows.html)
+  * [Qt for Windows - Deployment](https://doc.qt.io/qt-5/windows-deployment.html)
+  * [Qt for Windows - Specific Issues](https://doc.qt.io/qt-5/windows-issues.html)
+
 ## References
   * Building with CMake: https://doc.qt.io/qt-5/cmake-manual.html
   * Using CMake with Qt 5: https://www.kdab.com/using-cmake-with-qt-5/
