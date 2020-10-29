@@ -30,7 +30,7 @@ add_project_meta(META_FILES_TO_INCLUDE)
 
 set(RESOURCE_FILES example.qrc)
 
-find_package(Qt5Widgets REQUIRED)
+find_package(Qt5 COMPONENTS Widgets REQUIRED)
 
 # source_group("UI Files" FILES ${UI_FILES})
 
@@ -38,4 +38,4 @@ add_executable(${PROJECT_NAME} ${OS_BUNDLE} # Expands to WIN32 or MACOS_BUNDLE d
     ${SOURCE_FILES} ${META_FILES_TO_INCLUDE} ${RESOURCE_FILES}
 )
 
-qt5_use_modules(${PROJECT_NAME} Widgets)
+target_link_libraries(${PROJECT_NAME} Qt5::Widgets)
