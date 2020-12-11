@@ -1,4 +1,4 @@
-# Reference: http://qt-project.org/doc/qt-5.0/qtdoc/cmake-manual.html
+# Reference: https://doc.qt.io/qt-6/cmake-manual.html
 
 cmake_minimum_required(VERSION 3.0)
 
@@ -30,7 +30,7 @@ add_project_meta(META_FILES_TO_INCLUDE)
 
 set(RESOURCE_FILES example.qrc)
 
-find_package(Qt5 COMPONENTS Widgets REQUIRED)
+find_package(Qt6 COMPONENTS Widgets REQUIRED)
 
 # source_group("UI Files" FILES ${UI_FILES})
 
@@ -38,4 +38,4 @@ add_executable(${PROJECT_NAME} ${OS_BUNDLE} # Expands to WIN32 or MACOS_BUNDLE d
     ${SOURCE_FILES} ${META_FILES_TO_INCLUDE} ${RESOURCE_FILES}
 )
 
-target_link_libraries(${PROJECT_NAME} Qt5::Widgets)
+target_link_libraries(${PROJECT_NAME} Qt6::Widgets)
