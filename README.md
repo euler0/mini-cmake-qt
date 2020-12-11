@@ -1,6 +1,8 @@
 # Minimal CMake Template for Qt 5 Projects
 
-[As I've briefly introduced](https://www.euler.kr/trl/2014/08/19/minimal-cmake-template/), this is a minimal, but complete and production-ready CMake project template for Qt 5 projects. This may be a starting point for your new application. If that is not intent to be a cross-platform project, you can clean up that stuffs from the template.
+*This branch is for Qt 5. Visit [main](https://github.com/euler0/mini-cmake-qt/tree/main) branch if you are looking for the Qt 6 template.*
+
+This is a minimal, but complete and production-ready CMake project template for Qt 5 projects. This may be a starting point for your new application. If that is not intent to be a cross-platform project, you can clean up that stuffs from the template.
 
 ## Features
   * Handling all possible Qt stuffs (UI, resources, ~~translations~~)
