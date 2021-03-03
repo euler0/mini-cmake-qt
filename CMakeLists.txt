@@ -22,8 +22,8 @@ set(COPYRIGHT "Copyright (c) 2014 Vincent Lee. All rights reserved.")
 set(IDENTIFIER "com.example.Example")
 
 set(SOURCE_FILES
-    src/main.cc
-    src/mainwindow.cc
+    src/main.cpp
+    src/mainwindow.cpp
 )
 
 add_project_meta(META_FILES_TO_INCLUDE)
