@@ -38,6 +38,12 @@ add_executable(${PROJECT_NAME} ${OS_BUNDLE} # Expands to WIN32 or MACOS_BUNDLE d
     ${SOURCE_FILES} ${META_FILES_TO_INCLUDE} ${RESOURCE_FILES}
 )
 
+set_target_properties(${PROJECT_NAME}
+    PROPERTIES
+        CXX_STANDARD 17
+        CXX_STANDARD_REQUIRED ON
+)
+
 target_precompile_headers(${PROJECT_NAME} INTERFACE QtWidgets.h)
 
 target_link_libraries(${PROJECT_NAME} Qt6::Widgets)
