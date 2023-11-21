@@ -32,9 +32,9 @@ set(RESOURCE_FILES example.qrc)
 
 find_package(Qt6 COMPONENTS Widgets REQUIRED)
 
-# source_group("UI Files" FILES ${UI_FILES})
+qt_standard_project_setup()
 
-add_executable(${PROJECT_NAME} ${OS_BUNDLE} # Expands to WIN32 or MACOS_BUNDLE depending on OS
+add_executable(${PROJECT_NAME} WIN32 MACOSX_BUNDLE
     ${SOURCE_FILES} ${META_FILES_TO_INCLUDE} ${RESOURCE_FILES}
 )
 

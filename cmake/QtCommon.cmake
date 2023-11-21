@@ -52,31 +52,3 @@ elseif (WIN32)
     set(${FILES_TO_INCLUDE} ${RES_FILES})
 endif()
 endmacro()
-
-macro(init_os_bundle)
-if (APPLE)
-    set(OS_BUNDLE MACOSX_BUNDLE)
-elseif (WIN32)
-    set(OS_BUNDLE WIN32)
-endif()
-endmacro()
-
-macro(fix_win_compiler)
-if (MSVC)
-    set_target_properties(${PROJECT_NAME} PROPERTIES
-        WIN32_EXECUTABLE YES
-        LINK_FLAGS "/ENTRY:mainCRTStartup"
-    )
-endif()
-endmacro()
-
-macro(init_qt)
-# Let's do the CMake job for us
-set(CMAKE_AUTOMOC ON) # For meta object compiler
-set(CMAKE_AUTORCC ON) # Resource files
-set(CMAKE_AUTOUIC ON) # UI files
-endmacro()
-
-init_os_bundle()
-init_qt()
-fix_win_compiler()
