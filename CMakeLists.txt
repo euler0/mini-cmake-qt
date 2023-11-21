@@ -48,4 +48,7 @@ target_precompile_headers(${PROJECT_NAME} INTERFACE QtWidgets.h)
 
 target_link_libraries(${PROJECT_NAME} Qt6::Widgets)
 
-install(TARGETS ${PROJECT_NAME})
+install(
+    TARGETS ${PROJECT_NAME}
+    BUNDLE DESTINATION /Applications
+)
