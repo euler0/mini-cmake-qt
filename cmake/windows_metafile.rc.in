@@ -13,7 +13,7 @@ VS_VERSION_INFO VERSIONINFO
 BEGIN
     BLOCK "StringFileInfo"
     BEGIN
-        BLOCK "000004b0"
+        BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "@COMPANY@"
             VALUE "FileDescription", "@PROJECT_NAME@"
@@ -25,5 +25,16 @@ BEGIN
             VALUE "ProductVersion", "@PROJECT_VERSION@"
         END
     END
-END
 
+    BLOCK "VarFileInfo"
+    BEGIN
+        /* The following line should only be modified for localized versions.     */
+        /* It consists of any number of WORD,WORD pairs, with each pair           */
+        /* describing a language,codepage combination supported by the file.      */
+        /*                                                                        */
+        /* For example, a file might have values "0x409,1252" indicating that it  */
+        /* supports English language (0x409) in the Windows ANSI codepage (1252). */
+
+        VALUE "Translation", 0x409, 1252
+    END
+END
